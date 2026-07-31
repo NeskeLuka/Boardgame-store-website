@@ -1,0 +1,12 @@
+body { background: #f6f7f9; }
+
+.stars { display: inline-flex; gap: 2px; font-size: 1.15rem; line-height: 1; color: #d7d7d7; }
+.stars .on { color: #f5a623; }
+.star-input { display: inline-flex; gap: 4px; font-size: 1.9rem; line-height: 1; cursor: pointer; }
+.star-input span { color: #d7d7d7; transition: color .1s; user-select: none; }
+.star-input span.hl { color: #f5a623; }
+.meta-list dt { color: #6c757d; font-weight: 500; }
+.meta-list dd { font-weight: 600; }
+.review-card { border: 1px solid #e9ecef; border-radius: .75rem; }
+
+#demo .carousel-control-prev-icon, #demo .carousel-control-next-icon{filter: invert(1);}

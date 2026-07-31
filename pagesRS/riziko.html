@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalji igre — Riziko</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="gameSRP.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo.svg" alt="Logo" width="75" height="60" class="d-inline-block align-text-center">
+        Kocka
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse align-center" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Početna</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../gallery.html">Galerija</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Katalog igara
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Porodične igre</a></li>
+              <li><a class="dropdown-item" href="#">Strateške igre</a></li>
+              <li><a class="dropdown-item" href="#">Zabavne igre</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../cart.html">Moj nalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../oNama.html">O nama</a>
+          </li>
+        </ul>
+
+        <div class="icons-cont">
+          <div class="lang-check">
+            <span>RS</span>
+            <div class="form-check form-switch">
+              <input class="form-check-input lang-switch" id="lang-../pagesEN/riziko-rs" type="checkbox" role="switch">
+            </div>
+            <span>EN</span>
+          </div>
+
+          <div class="cart-cont">
+            <span class="position-relative">
+              <a class="nav-link active" aria-current="page" href="../cart.html">
+                <span class="cart-icon">🛒</span>
+              </a>
+              <span id="cartBadge"
+                class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container pb-5">
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/riziko-1.jpg" alt="riziko-1" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/riziko-2.jpg" alt="riziko-1" class="d-block w-100">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h1 id="gameName" class="h2 mb-2">Riziko</h1>
+
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span id="avgStars" class="stars"></span>
+          <span id="avgText" class="text-muted small"></span>
+        </div>
+
+        <p id="gameDesc" class="text-secondary">Igra globalne dominacije i strategije.
+          Komandujte svojim armijama, osvajajte teritorije i eliminisite rivale da biste zavladali svetom.
+        </p>
+
+        <dl class="row meta-list mb-4">
+          <dt class="col-6">Broj igraca</dt>
+          <dd id="mPlayers" class="col-6 text-end">2-6</dd>
+          <dt class="col-6">Preporuceni uzrast</dt>
+          <dd id="mAge" class="col-6 text-end">10+</dd>
+          <dt class="col-6">Trajanje partije</dt>
+          <dd id="mDuration" class="col-6 text-end">120-180 min</dd>
+          <dt class="col-6">Cena</dt>
+          <dd id="mPrice" class="col-6 text-end fs-5 text-primary">3299</dd>
+        </dl>
+
+        <button id="addToCart" data-id="riziko" data-name="Riziko" data-price="3299"
+          class="btn btn-primary btn-lg w-100">Dodaj u korpu</button>
+        <div id="cartMsg" class="text-success small mt-2" style="min-height:1.2em;"></div>
+        <button id="removeComments" data-id="avalon" data-name="Avalon" data-price="2799"
+          class="btn btn-primary btn-lg w-100">
+          Obrisi komentare
+        </button>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="h4 mb-3">Ocene i komentari</h2>
+        <p id="summary" class="text-muted mb-4"></p>
+
+        <div class="card review-card mb-4">
+          <div class="card-body">
+            <label class="form-label mb-1">Vasa ocena</label>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div id="starInput" class="star-input" role="radiogroup" aria-label="Vasa ocena">
+                <span data-v="1" role="radio" tabindex="0">★</span>
+                <span data-v="2" role="radio" tabindex="0">★</span>
+                <span data-v="3" role="radio" tabindex="0">★</span>
+                <span data-v="4" role="radio" tabindex="0">★</span>
+                <span data-v="5" role="radio" tabindex="0">★</span>
+              </div>
+              <span id="ratingLabel" class="text-muted small"></span>
+            </div>
+
+            <input id="author" class="form-control mb-2" placeholder="Vase ime (opciono)">
+            <textarea id="commentText" class="form-control mb-3" rows="3"
+              placeholder="Napisite komentar (opciono)"></textarea>
+
+            <div class="d-flex align-items-center gap-3">
+              <button id="submitReview" class="btn btn-success">Posalji</button>
+              <span id="formError" class="text-danger small"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="reviewList"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../jquery-4.0.0.min.js"></script>
+  <script src="../bootstrap.bundle.min.js"></script>
+  <script src="../navbar.js"></script>
+  <script src="../lang.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game details — Blade Fellowship</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../pagesRS/gameSRP.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+
+  <main class="container pb-5">
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/druzinaOstrice-1.jpg" alt="druzina-ostrice-1" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="../img/druzinaOstrice-2.jpg" alt="druzina-ostrice-2" class="d-block w-100">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <h1 class="h2 mb-2">Blade Fellowship</h1>
+
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span id="avgStars" class="stars"></span>
+          <span id="avgText" class="text-muted small"></span>
+        </div>
+
+        <p class="text-secondary">A cooperative adventure game where a fellowship of heroes journeys across a perilous
+          land, battling foes and uncovering secrets together.</p>
+
+        <dl class="row meta-list mb-4">
+          <dt class="col-6">Players</dt>
+          <dd class="col-6 text-end">1-5</dd>
+          <dt class="col-6">Recommended age</dt>
+          <dd class="col-6 text-end">12+</dd>
+          <dt class="col-6">Play time</dt>
+          <dd class="col-6 text-end">60-120 min</dd>
+          <dt class="col-6">Price</dt>
+          <dd class="col-6 text-end fs-5 text-primary">4.599 RSD</dd>
+        </dl>
+
+        <button id="addToCart" data-id="druzinaOstrice" data-name="Blade Fellowship" data-price="4599"
+          class="btn btn-primary btn-lg w-100">
+          Add to cart
+        </button>
+        <div id="cartMsg" class="text-success small mt-2" style="min-height:1.2em;"></div>
+        <button id="removeComments" data-id="avalon" data-name="Avalon" data-price="2799"
+          class="btn btn-primary btn-lg w-100">
+          Delete comments
+        </button>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="h4 mb-3">Ratings and comments</h2>
+        <p id="summary" class="text-muted mb-4">Loading...</p>
+
+        <div class="card review-card mb-4">
+          <div class="card-body">
+            <label class="form-label mb-1">Your rating</label>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div id="starInput" class="star-input" style="cursor: pointer;">
+                <span data-v="1">★</span>
+                <span data-v="2">★</span>
+                <span data-v="3">★</span>
+                <span data-v="4">★</span>
+                <span data-v="5">★</span>
+              </div>
+              <span id="ratingLabel" class="text-muted small"></span>
+            </div>
+
+            <input id="author" class="form-control mb-2" placeholder="Your name (optional)">
+            <textarea id="commentText" class="form-control mb-3" rows="3"
+              placeholder="Write a comment (optional)"></textarea>
+
+            <div class="d-flex align-items-center gap-3">
+              <button id="submitReview" class="btn btn-success">Submit</button>
+              <span id="formError" class="text-danger small"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="reviewList"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="../jquery-4.0.0.min.js"></script>
+  <script src="../bootstrap.bundle.min.js"></script>
+  <script src="../navbar.js"></script>
+  <script src="../lang.js"></script>
+  <script src="gameEN.js"></script>
+</body>
+
+</html>

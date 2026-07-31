@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kocka - Strateškе igre</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../bootstrap.bundle.min.js"></script>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script src="../jspdf.umd.min.js"></script>
+    <script src="../pdf.js"></script>
+    <script src="../navbar.js"></script>
+    <script src="../lang.js"></script>
+    <script src="../pagesRS/game.js"></script>
+    <script src="../game-list.js"></script>
+</head>
+
+<body id="strategy">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"></nav>
+    <main class="catalog">
+        <div class="filters">
+            <div class="filter-cont">
+                <span><label for="sort-by">Sortiraj po: </label></span>
+                <select name="sort-by" id="sort-by" class="form-select" aria-label="Sort by">
+                    <option value="nameAsc" selected>Imenu A-Z</option>
+                    <option value="nameDesc">Imenu Z-A</option>
+                    <option value="priceAsc">Ceni rastuće</option>
+                    <option value="priceDesc">Ceni opadajuće</option>
+                    <option value="playersAsc">Broju igraca rastuće</option>
+                    <option value="playersDesc">Broju igraca opadajuće</option>
+                </select>
+            </div>
+
+            <div class="filter-searches-cont">
+                <div class="filter-cont price-cont">
+                    <span id="price-range-display" class="text-center"></span>
+                    <div class="position-relative price-range-cont">
+                        <input type="range" class="price-range form-range" id="price-range-low" step="1">
+                        <input type="range" class="price-range form-range" id="price-range-high" step="1">
+                    </div>
+                </div>
+
+                <div class="filter-cont">
+                    <input type="text" name="search" id="search" class="form-control search-input"
+                        placeholder="Pretraži...">
+                </div>
+            </div>
+
+            <div class="filter-cont">
+                <div class="filter-btn-cont">
+                    <button type="button" class="btn btn-primary" id="save-pdf">
+                        Sačuvaj kao PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="games-cont"></div>
+    </main>
+</body>
+
+</html>

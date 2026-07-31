@@ -1,0 +1,478 @@
+:root {
+    --section-even-color: #f6f7f9;
+    --section-odd-color: #f4f0f0;
+}
+
+body {
+    background: #f6f7f9;
+}
+
+.game-img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+}
+
+.thumb {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: .5rem;
+    transition: border-color .15s;
+}
+
+.thumb.active,
+.thumb:hover {
+    border-color: #0d6efd;
+}
+
+.stars {
+    display: inline-flex;
+    gap: 2px;
+    font-size: 1.15rem;
+    line-height: 1;
+    color: #d7d7d7;
+}
+
+.stars .on {
+    color: #f5a623;
+}
+
+.star-input {
+    display: inline-flex;
+    gap: 4px;
+    font-size: 1.9rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.star-input span {
+    color: #d7d7d7;
+    transition: color .1s;
+    user-select: none;
+}
+
+.star-input span.hl {
+    color: #f5a623;
+}
+
+.meta-list dt {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.meta-list dd {
+    font-weight: 600;
+}
+
+.review-card {
+    border: 1px solid #e9ecef;
+    border-radius: .75rem;
+}
+
+.carousel-inner {
+    height: 400px;
+    background-color: #e9ecef;  
+    border-radius: 8px;  
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+   filter: invert(1);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: fit-content;
+    padding-top: 24px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0px 32px;
+    gap: 36px;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.sales .card,
+.new-games .card,
+.best-games .card {
+    min-height: 480px;
+    padding: 0px 24px;
+    width: 20rem;
+}
+
+.card img  {
+    padding: 12px 0px;
+}
+
+.home .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#top-3-games .card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .card-body .card-text:last-of-type {
+    margin-top: auto;
+    padding-bottom: 12px;
+}
+
+.main-section h3 {
+    padding: 8px;
+}
+
+.section-cont:nth-child(odd) {
+  background-color: var(--section-odd-color);
+}
+
+.section-cont:nth-child(even) {
+  background-color: var(--section-even-color);
+}
+
+.section-cont {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.events .card-container {
+    flex-direction: column;
+}
+
+.badge-img {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 1;
+    font-size: 22px;
+}
+
+.lang-check {
+    display: flex;
+    gap: 4px
+}
+
+.lang-check .form-check {
+    display: flex;
+    justify-content: center;
+}
+
+.icons-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 24px;
+    gap: 24px;
+}
+
+.cart-list {
+    width: 80%;
+    padding: 36px 0px 0px;
+    margin: 0;
+}
+
+.cart-list ul {
+    padding: 0;
+}
+
+.game-elem {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.game-elem span {
+    width: 150px;
+    text-align: end;
+}
+
+.game-elem h5{
+    width: 60%;
+}
+
+.game-elem:last-of-type {
+    border-top: 2px dashed #6c757d;
+    padding-top: 24px;
+    margin-top: 24px;
+    justify-content: flex-end;
+    gap: 36px;
+    font-size: 24px;
+}
+
+main.catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.filter-cont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 2;
+}
+
+.filter-cont label {
+    width: 120px;
+    text-align: center;
+}
+
+.filter-cont:last-of-type {
+    flex-grow: 1;
+}
+
+.filter-btn-cont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.games-cont {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+
+.game-card {
+    margin-top: 36px;
+    background-color: var(--section-odd-color);
+    display: flex;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.game-card img {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    object-fit: contain;
+}
+
+.game-img-cont {
+    background-color: #ffffff;
+    display: flex;
+    width: clamp(200px, 50%, 400px);
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
+
+@media (max-width: 800px) {
+    .game-card {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .game-img-cont {
+        background-color: #ffffff;
+        max-width: none;
+        width: 100%;
+        border-radius: 24px 24px 0px 0px;
+    }
+
+    .game-card .game-img {
+        max-width: none;
+        border-radius: 24px 24px 0px 0px;
+    }
+
+    nav.breadcrumb {
+        padding-left: 0px;
+    }
+
+    .game-card .game-card-body {
+    width: 100%;
+    }
+}
+
+.main-catalog .games-cont{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-catalog .game-card img {
+    /* max-width: 320px; */
+    object-fit: cover;
+}
+
+.main-catalog a {
+    width: 80%;
+}
+
+.games-cont a {
+    text-decoration: none;
+    color: #111111
+}
+
+.game-card,
+.main-section .card {
+    transition: transform 0.2s ease;
+}
+
+.game-card:hover,
+.game-card:active,
+.main-section .card:active,
+.main-section .card:hover {
+    transform: scale(1.01);
+}
+
+.game-card-body {
+    padding: 24px;
+    width: 75%;
+}
+
+.game-card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.game-card-header p{
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+nav.breadcrumb {
+    padding-left: 48px;
+}
+
+nav.breadcrumb a{
+    text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid #dee2e6;
+  margin-top: 3rem;
+  color: #6c757d;
+}
+
+.qty-minus{
+    background-color: rgb(242, 88, 88);
+    font-weight: bold;
+    color: #111111;
+}
+.cart-list,
+.cart-history {
+    width: 80%;
+    padding: 36px 0px 0px;
+    margin: 0 auto;
+}
+
+.price-range-cont, .player-range-cont {
+    width: 200px;
+    position: relative;
+    height: 20px;
+}
+
+.price-range, .player-range {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    pointer-events: none;
+}
+
+.price-range:last-of-type::-webkit-slider-runnable-track, .player-range:last-of-type::-webkit-slider-runnable-track {
+    background: transparent;
+}
+
+.price-range:last-of-type::-moz-range-track, .player-range:last-of-type::-moz-range-track {
+    background: transparent;
+}
+
+.price-range::-webkit-slider-thumb, .player-range::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+.price-range::-moz-range-thumb, .player-range::-moz-range-thumb {
+    pointer-events: auto;
+}
+
+.filter-cont.price-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-cont span {
+    width: 100%;
+}
+
+.filter-searches-cont {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.footer-banners {
+  margin-bottom: 1rem;
+}
+
+.footer-banners-title {
+  display: block;
+  font-size: .85rem;
+  opacity: .7;
+  margin-bottom: .5rem;
+}
+
+.footer-banners-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-banner img {
+  opacity: .7;
+  transition: opacity .2s;
+}
+
+.footer-banner img:hover {
+  opacity: 1;
+}
